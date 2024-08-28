@@ -1,0 +1,196 @@
+{
+    "key": "group_6357a6cbe2041",
+    "title": "Block: Testimonials\/Quote",
+    "fields": [
+        {
+            "key": "field_6357a6cc7f0e9",
+            "label": "Block: Testimonials\/Quote",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_636ccb942fad9",
+            "label": "Spacing",
+            "name": "block_spacing",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_636ccb942fada",
+                    "label": "Padding Top",
+                    "name": "margin_top",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "mt-1": "Small",
+                        "mt-2": "Medium",
+                        "mt-3": "Large"
+                    },
+                    "default_value": "mt-2",
+                    "return_format": "value",
+                    "allow_null": 1,
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_636ccb942fadb",
+                    "label": "Padding Bottom",
+                    "name": "margin_bottom",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "mb-1": "Small",
+                        "mb-2": "Medium",
+                        "mb-3": "Large"
+                    },
+                    "default_value": "mb-2",
+                    "return_format": "value",
+                    "allow_null": 1,
+                    "layout": "horizontal"
+                }
+            ]
+        },
+        {
+            "key": "field_6357a8f28d6f7",
+            "label": "Testimonials",
+            "name": "block_testimonials",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Testimonial\/Quote",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6357a95d06268",
+                    "label": "Title",
+                    "name": "testimonial_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6357a8f28d6f7"
+                },
+                {
+                    "key": "field_6357a9d20626a",
+                    "label": "Copy",
+                    "name": "testimonial_copy",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_6357a8f28d6f7"
+                },
+                {
+                    "key": "field_6357a9b006269",
+                    "label": "Caption",
+                    "name": "testimonial_caption",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6357a8f28d6f7"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/testimonials"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1669886827
+}

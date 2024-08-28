@@ -1,0 +1,255 @@
+{
+    "key": "group_6346a604db3a3",
+    "title": "Block: Case Study - Featured",
+    "fields": [
+        {
+            "key": "field_6346aae0b8b7b",
+            "label": "Block: Case Study - Featured",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Featured Case Study can be selected in the Admin Menu -> Case Studies -> Featured Case Study",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_636bc3345e42b",
+            "label": "Spacing",
+            "name": "block_spacing",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_636bc3345e42c",
+                    "label": "Padding Top",
+                    "name": "margin_top",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "mt-1": "Small",
+                        "mt-2": "Medium",
+                        "mt-3": "Large"
+                    },
+                    "default_value": "mt-2",
+                    "return_format": "value",
+                    "allow_null": 1,
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_636bc3345e42d",
+                    "label": "Padding Bottom",
+                    "name": "margin_bottom",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "mb-1": "Small",
+                        "mb-2": "Medium",
+                        "mb-3": "Large"
+                    },
+                    "default_value": "mb-2",
+                    "return_format": "value",
+                    "allow_null": 1,
+                    "layout": "horizontal"
+                }
+            ]
+        },
+        {
+            "key": "field_63720e4934520",
+            "label": "Title",
+            "name": "featured_case_study_block_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6346a9ebfb71c",
+            "label": "Graphic Element",
+            "name": "featured_case_study_graphic_element",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "lines": "Lines 1",
+                "lines01": "Lines 2",
+                "scribble01": "Scribble 1",
+                "scribble02": "Scribble 2",
+                "scribble03": "Scribble 3",
+                "scribble04": "Scribble 4",
+                "star01": "Star 1",
+                "star02": "Star 2",
+                "swirl01": "Swirl 1",
+                "swirl02": "Swirl 2",
+                "swirl03": "Swirl 3",
+                "swirl04": "Swirl 4",
+                "swirl05": "Swirl 5",
+                "swirl06": "Swirl 6",
+                "tunes": "Tunes"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_63bff871ad32a",
+            "label": "Graphic Element Transformation",
+            "name": "graphic_element_transformation",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6346a9ebfb71c",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_63bff871ad32b",
+                    "label": "Flip Horizontally",
+                    "name": "flip_horizontal",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_63bff871ad32c",
+                    "label": "Flip Vertically",
+                    "name": "flip_vertical",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_63bff871ad32d",
+                    "label": "Rotate (deg)",
+                    "name": "rotate",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": 1,
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/case-study-featured"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1673863954
+}
