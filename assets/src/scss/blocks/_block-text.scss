@@ -1,0 +1,165 @@
+.block-text {
+  background-color: $clr-off-white;
+
+  &__inner {
+    width: 65%;
+    &.align-left {
+      margin-left: 15%;
+      .block-text__copy-graphic {
+        @include for-size($tablet-portrait-up) {
+          left: calc(110%);
+        }
+      }
+    }
+
+    &.align-right {
+      margin-left: auto;
+      margin-right: 5%;
+      .block-text__copy-graphic {
+        @include for-size($tablet-portrait-up) {
+          left: -130px;
+        }
+        @include for-size($desktop-up) {
+          left: -185px;
+        }
+      }
+    }
+
+    @include for-size($phone-only) {
+      width: calc(100% - 50px);
+      &.align-left {
+        margin-left: 0;
+      }
+      &.align-right {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__title {
+    h2 {
+      padding-bottom: 40px;
+      position: relative;
+      width: fit-content;
+      @include for-size($phone-only) {
+        padding-bottom: 15px;
+      }
+    }
+
+    .graphic-element {
+      display: inline-block;
+      flex: 0;
+      position: absolute;
+      width: 70px;
+      @include for-size($phone-only) {
+        width: 50px;
+      }
+
+      svg,
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    &[class*='graphic-align'] {
+      h2 {
+        align-items: center;
+        display: flex;
+      }
+    }
+
+    &.graphic-align-left {
+      // .title-text {
+      //   display: inline-flex;
+      //   order: 2;
+      // }
+
+      .graphic-element {
+        display: inline-flex;
+        left: -85px;
+        // order: 1;
+        @include for-size($phone-only) {
+          flex: unset;
+          left: 0;
+          position: relative;
+        }
+      }
+      h2 {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &.graphic-align-right {
+      h2 {
+        max-width: 80%;
+      }
+
+      .graphic-element {
+        right: -85px;
+        @include for-size($phone-only) {
+          right: -65px;
+        }
+      }
+    }
+
+    &.graphic-circled {
+      // h2 {
+      //   width: fit-content;
+      // }
+
+      .graphic-circle {
+        height: calc(130% - 40px);
+        left: -10%;
+        top: -15%;
+        width: 120%;
+        svg,
+        img {
+          height: 100%;
+          width: 100%;
+        }
+        @include for-size($phone-only) {
+          height: calc(130% - 15px);
+        }
+      }
+    }
+  }
+
+  &__copy {
+    color: $clr-dark-grey;
+    // padding-top: 40px;
+    position: relative;
+    a {
+      color: $clr-mallard-green;
+      display: inline;
+      &:hover,
+      &:focus {
+        color: $clr-dark-grey;
+        text-decoration-color: $clr-dark-grey;
+      }
+    }
+    .block-text__copy-graphic {
+      margin-top: -15%;
+      position: relative;
+      svg,
+      img {
+        height: auto;
+        width: 100%;
+      }
+      @include for-size($phone-only) {
+        display: none;
+      }
+
+      @include for-size($tablet-portrait-up) {
+        width: 100px;
+      }
+
+      @include for-size($desktop-up) {
+        width: 150px;
+      }
+    }
+    // @include for-size($phone-only) {
+    //   padding-top: 15px;
+    // }
+  }
+}

@@ -1,0 +1,57 @@
+.block-hero-alt {
+  &__text {
+    h1 {
+      padding-bottom: 15px;
+    }
+    h2 {
+      margin-left: auto;
+      position: relative;
+      text-align: right;
+      width: fit-content;
+      .graphic-element {
+        display: block;
+        height: 4.5em;
+        left: -4em;
+        position: absolute;
+        top: 0.5em;
+        svg {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__media {
+    margin-top: 45px;
+    position: relative;
+    z-index: -1;
+  }
+
+  @include for-size($phone-only) {
+    &__text {
+      h2 {
+        text-align: left;
+        .graphic-element {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include for-size($tablet-portrait-up) {
+    &__media {
+      margin-top: 55px;
+    }
+  }
+  @include for-size($desktop-up) {
+    &__text {
+      h1 {
+        padding-bottom: 25px;
+      }
+    }
+    &__media {
+      margin-top: 35px;
+    }
+  }
+}

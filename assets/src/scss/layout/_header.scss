@@ -1,0 +1,130 @@
+.header {
+  background-color: $clr-white;
+  left: 0;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  transition: $transition-default;
+  z-index: 999;
+
+  ul li {
+    list-style: none;
+  }
+
+  &__row {
+    align-items: center;
+    display: flex;
+    padding: 15px 0;
+    position: relative;
+    @include for-size($tablet-landscape-up) {
+      padding: 25px 0;
+    }
+  }
+
+  &__logo {
+    a {
+      aspect-ratio: 1/1;
+      display: block;
+      width: 52px;
+      @include for-size($tablet-portrait-up) {
+        width: 76px;
+      }
+      @include for-size($desktop-up) {
+        width: 58px;
+      }
+      svg {
+        height: 100%;
+        min-width: 50px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    margin-left: auto;
+    @include for-size($tablet-landscape-up) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    align-items: center;
+    display: none;
+    margin-left: auto;
+    @include for-size($tablet-landscape-up) {
+      display: flex;
+    }
+
+    ul {
+      display: flex;
+      li {
+        margin-right: 55px;
+        a {
+          position: relative;
+          &:hover {
+            text-decoration-color: none;
+            .menu-item-underline {
+              svg {
+                path {
+                  stroke-dashoffset: 0;
+                }
+              }
+            }
+          }
+        }
+
+        &.current-menu-item {
+          .menu-item-underline {
+            svg {
+              path {
+                stroke-dashoffset: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .menu-social {
+      svg {
+        min-width: 24px;
+        path {
+          fill: $clr-navy;
+          transition: $transition-default;
+        }
+      }
+
+      &:hover,
+      &:focus-visible {
+        svg {
+          path {
+            fill: $clr-mallard-green;
+          }
+        }
+      }
+    }
+
+    .menu-item-underline {
+      bottom: -8px;
+      display: block;
+      height: 12px;
+      left: -10%;
+      pointer-events: none;
+      position: absolute;
+      width: 120%;
+      svg {
+        width: 100%;
+        path {
+          stroke-dasharray: 260;
+          stroke-dashoffset: 260;
+          transition: $transition-slow;
+        }
+      }
+    }
+  }
+
+  &--menu-open {
+    background-color: $clr-off-white;
+  }
+}

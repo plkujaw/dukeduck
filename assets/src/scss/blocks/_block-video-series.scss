@@ -1,0 +1,234 @@
+.block-video-series {
+  &__heading {
+    display: flex;
+    margin-bottom: 60px;
+    .heading-image {
+      margin-left: auto;
+      max-height: 200px;
+      width: auto;
+
+      svg,
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    h2 {
+      max-width: 690px;
+      width: 70%;
+    }
+
+    @include for-size($phone-only) {
+      h2 {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .heading-image {
+        margin-left: auto;
+        position: relative;
+        width: fit-content;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+
+    @include for-size($phone-only) {
+      flex-direction: column;
+    }
+  }
+
+  &__current-episode {
+    transition: $transition-default;
+    width: 100%;
+    article {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 20px;
+      span {
+        color: $clr-dark-grey;
+        padding-right: 0.8em;
+        white-space: nowrap;
+      }
+
+      p {
+        align-self: center;
+        color: $clr-dark-grey;
+        flex: 1 1 100%;
+        padding-top: 40px;
+      }
+    }
+
+    @include for-size($tablet-portrait-up) {
+      width: 70%;
+      article {
+        p {
+          padding-left: 20%;
+          padding-top: 20px;
+        }
+      }
+    }
+
+    @include for-size($desktop-up) {
+      article {
+        padding-top: 40px;
+        p {
+          flex: 1 1 0;
+          padding-left: 50px;
+          padding-top: 0;
+        }
+        h3 {
+          max-width: 60%;
+        }
+      }
+    }
+  }
+
+  &__episodes {
+    width: 30%;
+
+    @include for-size($phone-only) {
+      margin: 0 -25px;
+      width: calc(100% + 50px);
+      h3,
+      .heading-image.visible-mobile {
+        display: inline-block;
+        height: 80px;
+      }
+    }
+
+    h3 {
+      padding: 35px 0 30px 25px;
+    }
+
+    @include for-size($tablet-portrait-up) {
+      margin-left: 35px;
+      h3 {
+        padding: 0 0 30px 0;
+      }
+    }
+
+    @include for-size($desktop-up) {
+      margin-left: 95px;
+      h3 {
+        padding: 0 0 18px 0;
+      }
+    }
+
+    .episodes-wrapper {
+      background-color: $clr-off-white;
+      padding: 17px 0 50px;
+
+      @include for-size($tablet-portrait-up) {
+        max-height: 400px;
+        padding: 15px 35px 15px 25px;
+      }
+
+      @include for-size($desktop-up) {
+        max-height: 600px;
+        padding: 40px 35px 40px 25px;
+      }
+
+      .os-scrollbar {
+        border-radius: 10px;
+        padding: 0;
+        z-index: 9;
+      }
+
+      .os-scrollbar-track {
+        background: $clr-white !important;
+      }
+
+      .os-scrollbar-horizontal {
+        height: 5px;
+        margin: 25px;
+      }
+
+      .os-scrollbar-vertical {
+        margin: 15px 8px 15px;
+        width: 6px;
+        @include for-size($desktop-up) {
+          margin: 40px 8px 40px;
+        }
+      }
+
+      .os-scrollbar-handle {
+        background: $clr-mallard-green !important;
+        max-height: 100px;
+        max-width: 100px;
+      }
+    }
+  }
+
+  &__episode-list {
+    list-style: none;
+    padding: 0;
+    @include for-size($phone-only) {
+      display: flex;
+      flex-wrap: nowrap;
+      .episode-list__episode {
+        display: inline-block;
+        flex: 0 0 100%;
+        margin-bottom: 0 !important;
+        max-width: 55%;
+        padding: 0 10px;
+      }
+    }
+
+    .episode-list__episode {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      cursor: pointer;
+      &-cover {
+        margin-bottom: 15px;
+        position: relative;
+        &::after {
+          background-color: $clr-mallard-green;
+          content: '';
+          height: 100%;
+          left: 0;
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          transform: translate(8px, 8px);
+          transition: $transition-default;
+          width: 100%;
+          z-index: -1;
+        }
+        svg {
+          left: 50%;
+          max-width: 50px;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 20%;
+        }
+      }
+      span {
+        color: $clr-dark-grey;
+        padding-right: 15px;
+      }
+
+      h4 {
+        display: inline-block;
+        width: fit-content;
+      }
+    }
+
+    .episode-list__episode[data-current='true'],
+    .episode-list__episode:hover {
+      .episode-list__episode {
+        &-cover {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

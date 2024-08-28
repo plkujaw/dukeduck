@@ -1,0 +1,199 @@
+.block-audio {
+  background-color: $clr-off-white;
+  &__wrapper {
+    display: flex;
+    @include for-size($phone-only) {
+      flex-direction: column;
+    }
+  }
+
+  &__graphic {
+    height: fit-content;
+    transform: translateY(-50%);
+    width: 20%;
+    @include for-size($phone-only) {
+      transform: translateY(-20%);
+      width: 40%;
+    }
+    svg,
+    img {
+      height: auto;
+      width: 50%;
+    }
+  }
+
+  &__list {
+    margin-left: auto;
+    max-width: 900px;
+    width: 80%;
+    @include for-size($phone-only) {
+      width: 100%;
+    }
+  }
+
+  &__player {
+    align-items: center;
+    background-color: $clr-navy;
+    display: flex;
+    height: 45px;
+    justify-content: space-between;
+    position: relative;
+
+    @include for-size($tablet-portrait-up) {
+      height: 55px;
+    }
+
+    @include for-size($desktop-up) {
+      height: 90px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+  }
+
+  .audio-player {
+    &__cover {
+      align-self: flex-end;
+      margin-left: 15px;
+      max-width: 80px;
+      transform: translateY(-15px);
+
+      @include for-size($tablet-portrait-up) {
+        max-width: 100px;
+      }
+
+      @include for-size($desktop-up) {
+        margin-left: 30px;
+        max-width: 120px;
+        transform: translateY(-30px);
+      }
+    }
+
+    &__playback {
+      cursor: pointer;
+      margin: 0 20px;
+
+      svg,
+      path,
+      rect {
+        transition: $transition-default;
+      }
+
+      .audio-pause {
+        opacity: 0;
+      }
+
+      &[playing='true'] {
+        .audio-pause {
+          opacity: 1;
+        }
+        .audio-play {
+          opacity: 0;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        svg {
+          path,
+          rect {
+            fill: $clr-mallard-green;
+          }
+        }
+      }
+
+      @include for-size($phone-only) {
+        margin: 0 15px;
+        max-width: 17px;
+      }
+    }
+
+    &__progress {
+      align-items: center;
+      display: flex;
+      width: 70%;
+
+      .progress-bar {
+        background-color: $clr-off-white;
+        cursor: pointer;
+        height: 7px;
+        margin-right: 20px;
+        position: relative;
+        width: 100%;
+        @include for-size($phone-only) {
+          margin-right: 10px;
+        }
+
+        &__progress-line {
+          background-color: $clr-mallard-green;
+          height: 100%;
+          max-width: 100%;
+          position: absolute;
+          transition: width linear 0.3s;
+          width: 0%;
+          &::after {
+            background-color: inherit;
+            border-radius: 50%;
+            content: '';
+            display: inline-block;
+            height: 11px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(50%, -50%);
+            width: 11px;
+          }
+        }
+      }
+
+      .progress-time {
+        color: $clr-white;
+        display: inline-block;
+        font-size: 12px;
+        time {
+          display: inline-block;
+          text-align: center;
+          width: 35px;
+        }
+      }
+    }
+
+    &__volume {
+      cursor: pointer;
+      margin: 0 30px 0 20px;
+      svg,
+      path,
+      rect {
+        transition: $transition-default;
+      }
+
+      &:hover,
+      &:focus {
+        svg {
+          path,
+          rect {
+            fill: $clr-mallard-green;
+          }
+        }
+      }
+
+      @include for-size($phone-only) {
+        margin: 0 10px;
+      }
+
+      .audio-muted {
+        opacity: 0;
+      }
+
+      &[data-muted='true'] {
+        .audio-muted {
+          opacity: 1;
+        }
+        .audio-unmuted {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

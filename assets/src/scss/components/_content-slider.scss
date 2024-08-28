@@ -1,0 +1,117 @@
+.content-slider {
+  &.swiper {
+    &::after {
+      background: linear-gradient(
+        -90deg,
+        rgba(255, 255, 255, 1) -20%,
+        rgba(255, 255, 255, 0) 100%
+      );
+
+      content: '';
+      height: 92%;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 10%;
+      z-index: 1;
+    }
+  }
+
+  img {
+    height: 100%;
+  }
+
+  &__heading {
+    padding-right: 25px;
+    position: relative;
+    z-index: 2;
+    @include for-size($phone-only) {
+      h2 {
+        padding-bottom: 34px;
+      }
+    }
+
+    @include for-size($tablet-portrait-up) {
+      padding-bottom: 20px;
+      padding-right: 40px;
+    }
+
+    @include for-size($desktop-up) {
+      padding-bottom: 60px;
+    }
+
+    .content-slider-scrollbar {
+      background-color: $clr-off-white;
+      border-radius: 15px;
+      height: 6px;
+      margin-bottom: 10px;
+      width: 100%;
+      z-index: 2;
+      .swiper-scrollbar-drag {
+        background-color: $clr-mallard-green;
+        border-radius: inherit;
+        cursor: pointer;
+        height: 6px;
+        width: 30%;
+      }
+
+      // @include for-size($desktop-up) {
+      //   display: none;
+      // }
+
+      @include for-size($tablet-portrait-up) {
+        margin-bottom: 0.8em;
+        margin-left: 10px;
+        width: 30%;
+      }
+    }
+
+    @include for-size($tablet-portrait-up) {
+      align-items: flex-end;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .swiper-slide {
+    max-height: 400px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .content-slider-nav {
+    display: none;
+    @include for-size($desktop-up) {
+      display: flex;
+      button {
+        svg path {
+          transition: $transition-default;
+        }
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+        &:disabled {
+          svg path {
+            animation: none;
+          }
+        }
+      }
+    }
+  }
+
+  .content-slider-more {
+    margin-left: auto;
+  }
+  .swiper-scrollbar-drag {
+    transition-duration: 0.5s !important;
+  }
+  .swiper-wrapper.mousewheel {
+    transition-duration: 0.5s !important;
+  }
+}

@@ -1,0 +1,93 @@
+.page404 {
+  height: 100%;
+  padding-top: 15px;
+
+  &__inner {
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 75px;
+  }
+
+  &__heading {
+    text-align: center;
+    h1 {
+      padding-bottom: 15px;
+    }
+    h2 {
+      margin: 0 auto;
+      max-width: 55%;
+    }
+  }
+
+  &__home-link {
+    margin-left: auto;
+    margin-top: 120px;
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+  }
+
+  &__media,
+  &__link {
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    width: 90%;
+    z-index: 1;
+  }
+
+  &__media {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    .embed-container,
+    iframe {
+      z-index: 1;
+    }
+  }
+
+  &__media-bg {
+    background-color: $clr-off-white;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+
+    &::after,
+    &::before {
+      background-color: inherit;
+      content: '';
+      height: 100%;
+      position: absolute;
+      width: 100vw;
+    }
+
+    &::after {
+      clip-path: polygon(0 0, 0% 100%, 100% 100%);
+      right: -100vw;
+    }
+
+    &::before {
+      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+      left: -100vw;
+    }
+  }
+
+  @include for-size($tablet-portrait-up) {
+    padding-top: 90px;
+    &__inner {
+      padding-bottom: 45px;
+    }
+
+    &__home-link {
+      margin-top: 85px;
+    }
+  }
+
+  @include for-size($desktop-up) {
+    &__inner {
+      padding-bottom: 55px;
+    }
+  }
+}

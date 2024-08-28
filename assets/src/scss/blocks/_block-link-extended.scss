@@ -1,0 +1,103 @@
+.block-link-extended {
+  &__title {
+    padding-bottom: 30px;
+    @include for-size($tablet-portrait-up) {
+      padding-bottom: 50px;
+    }
+    @include for-size($desktop-up) {
+      padding-bottom: 70px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    @include for-size($phone-only) {
+      display: block;
+    }
+  }
+
+  &__media {
+    aspect-ratio: 1/1;
+    height: 100%;
+    margin-right: 27px;
+    overflow: hidden;
+    width: calc(50% - 27px);
+
+    a,
+    img {
+      height: 100%;
+    }
+
+    @include for-size($desktop-up) {
+      margin-right: 40px;
+      width: calc(50% - 40px);
+    }
+
+    @include for-size($phone-only) {
+      margin-bottom: 28px;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 600px;
+    width: 50%;
+
+    .link-arrow-1 {
+      margin-top: 10%;
+      @include for-size($phone-only) {
+        flex: 1 1 100%;
+      }
+    }
+
+    @include for-size($phone-only) {
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
+  &__copy {
+    p {
+      color: $clr-dark-grey;
+      font-size: 14px;
+      letter-spacing: 0.012em;
+      line-height: 160%;
+      max-width: 85%;
+      @include for-size($desktop-up) {
+        font-size: 16px;
+      }
+    }
+
+    @include for-size($phone-only) {
+      flex: 1;
+      padding-right: 28px;
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__graphic-element {
+    margin-bottom: auto;
+    margin-left: auto;
+    max-width: 310px;
+    padding-bottom: 10%;
+    width: 50%;
+    svg,
+    img {
+      height: auto;
+    }
+
+    @include for-size($phone-only) {
+      flex: 0;
+      min-width: 90px;
+      padding-bottom: 0;
+      width: 100%;
+    }
+  }
+}

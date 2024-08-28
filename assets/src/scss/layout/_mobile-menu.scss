@@ -1,0 +1,107 @@
+.mobile-menu {
+  background-color: $clr-off-white;
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow-y: auto;
+  padding-bottom: 40px;
+  padding-top: 80px;
+  position: fixed;
+  top: 0;
+  transform: translateY(-100%);
+  transition: transform 0.5s cubic-bezier(0.3, -0.2, 0.78, 1.23);
+  width: 100%;
+  z-index: 999;
+
+  &--open {
+    transform: translateY(0);
+  }
+
+  &__nav {
+    @include for-size($phone-only) {
+      padding: 40px 59px;
+    }
+    padding: 69px 130px;
+    ul {
+      padding: 0;
+      list-style: none;
+      li {
+        padding-bottom: 55px;
+        &.current-menu-item {
+          .menu-item-underline {
+            svg {
+              path {
+                stroke-dashoffset: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .menu-item-underline {
+      bottom: -8px;
+      display: block;
+      height: 12px;
+      left: -10%;
+      pointer-events: none;
+      position: absolute;
+      width: 120%;
+      svg {
+        width: 100%;
+        path {
+          stroke-dasharray: 260;
+          stroke-dashoffset: 260;
+          transition: $transition-default;
+        }
+      }
+    }
+  }
+
+  &__social {
+    margin-top: 20px;
+    text-align: right;
+
+    .menu-social {
+      position: relative;
+      svg {
+        height: 48px;
+        width: 48px;
+        @include for-size($tablet-portrait-up) {
+          height: 105px;
+          width: 105px;
+        }
+        path {
+          fill: $clr-navy;
+        }
+      }
+      &:hover,
+      &:focus {
+        svg {
+          path {
+            fill: $clr-mallard-green;
+          }
+        }
+      }
+      &::before {
+        background-image: url(../../img/graphic-swirl.svg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 120px;
+        pointer-events: none;
+        position: absolute;
+        right: 96px;
+        width: 90px;
+        @include for-size($tablet-portrait-up) {
+          bottom: 20px;
+          height: 240px;
+          right: 150px;
+          width: 180px;
+        }
+      }
+    }
+  }
+}

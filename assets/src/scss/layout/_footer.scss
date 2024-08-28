@@ -1,0 +1,199 @@
+.footer {
+  ul li {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  background-color: $clr-navy;
+  color: $clr-white;
+  padding: 32px 0 24px;
+  @include for-size($tablet-portrait-up) {
+    padding-top: 41px;
+  }
+  @include for-size($desktop-up) {
+    padding: 61px 0 41px;
+  }
+
+  .link-active {
+    text-decoration-color: $clr-mallard-green;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    @include for-size($tablet-portrait-up) {
+      flex-direction: row;
+    }
+  }
+
+  &__social {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 70px;
+      li {
+        margin-bottom: 20px;
+        margin-right: 30px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          display: block;
+          height: 20px;
+          svg {
+            height: 100%;
+            width: auto !important;
+            path {
+              fill: $clr-white;
+              transition: $transition-default;
+            }
+          }
+          &:hover,
+          &:focus-visible {
+            svg {
+              path {
+                fill: $clr-logo;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include for-size($phone-only) {
+      ul {
+        justify-content: center;
+      }
+    }
+
+    @include for-size($tablet-portrait-up) {
+      margin-top: 0.4em;
+      padding-right: 30px;
+
+      ul {
+        margin-bottom: 0;
+      }
+    }
+
+    @include for-size($tablet-landscape-up) {
+      ul {
+        li {
+          a {
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    .footer__link-wrapper {
+      &:not(:last-child) {
+        margin-right: 47px;
+        @include for-size($desktop-up) {
+          margin-right: 75px;
+        }
+      }
+    }
+
+    @include for-size($phone-only) {
+      p {
+        margin-bottom: 20px;
+      }
+      .footer__link-wrapper {
+        margin-bottom: 36px;
+        margin-right: 0;
+      }
+    }
+    @include for-size($tablet-portrait-up) {
+      flex-direction: row;
+      margin-left: auto;
+    }
+
+    p {
+      margin-bottom: 15px;
+      white-space: nowrap;
+      &::after {
+        background-image: url(../../img/graphic-arrow.svg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        content: '';
+        display: inline-block;
+        height: 0.8em;
+        margin-left: 15px;
+        transform: rotate(90deg);
+        width: 1em;
+      }
+    }
+
+    a {
+      color: $clr-mallard-green;
+      &:hover,
+      &:focus-visible {
+        color: $clr-white;
+        text-decoration-color: inherit;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    .footer-col-links {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__credits {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    @include for-size($tablet-portrait-up) {
+      margin-top: 40px;
+    }
+    @include for-size($desktop-up) {
+      margin-top: 92px;
+    }
+
+    p {
+      padding-right: 10px;
+      a {
+        &:hover,
+        &:focus-visible {
+          color: $clr-mallard-green;
+          text-decoration-color: inherit;
+        }
+      }
+    }
+
+    .footer__logo {
+      display: block;
+      flex-shrink: 0;
+      width: 50px;
+      @include for-size($tablet-portrait-up) {
+        width: 45px;
+      }
+      @include for-size($desktop-up) {
+        width: 55px;
+      }
+
+      svg {
+        height: auto !important;
+        width: 100% !important;
+        path {
+          fill: $clr-logo;
+          transition: $transition-default;
+        }
+      }
+      &:hover,
+      &:focus-visible {
+        svg path {
+          fill: $clr-white;
+        }
+      }
+    }
+  }
+}

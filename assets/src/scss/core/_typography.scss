@@ -1,0 +1,182 @@
+body {
+  font-family: $brand-font-1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; // aestheticallyloyal.com/public/optimize-legibility/
+  -webkit-text-size-adjust: 100%; // Prevents iOS orientation font resize bug
+}
+
+a,
+p {
+  font-size: 1em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.fs-nav {
+  font-size: 35px;
+  font-weight: 500;
+  position: relative;
+  text-transform: uppercase;
+  @include for-size($tablet-portrait-up) {
+    font-size: 60px;
+  }
+  @include for-size($tablet-landscape-up) {
+    font-size: 20px;
+  }
+}
+
+.fs-p1 {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.012em;
+  line-height: 160%;
+  @include for-size($tablet-portrait-up) {
+    font-size: 20px;
+  }
+  @include for-size($desktop-up) {
+    font-size: 25px;
+  }
+}
+
+.fs-p2 {
+  font-size: 14px !important;
+  letter-spacing: 0.012em !important;
+  line-height: 160% !important;
+  @include for-size($tablet-portrait-up) {
+    font-size: 17px !important;
+  }
+  @include for-size($desktop-up) {
+    font-size: 20px !important;
+  }
+}
+
+.fs-p3 {
+  font-size: 14px;
+  letter-spacing: 0.012em;
+  line-height: 160%;
+  @include for-size($desktop-up) {
+    font-size: 16px;
+  }
+}
+
+.fs-p4 {
+  font-size: 13px;
+  letter-spacing: 0.012em;
+  line-height: 140%;
+  @include for-size($tablet-portrait-up) {
+    font-size: 14px;
+  }
+  @include for-size($desktop-up) {
+    font-size: 15px;
+  }
+}
+
+.fs-b1,
+.fs-b2 {
+  align-items: center;
+  display: flex;
+}
+
+.fs-b1 {
+  font-size: 16px !important;
+  @include for-size($desktop-up) {
+    font-size: 22px !important;
+  }
+}
+
+.fs-b2 {
+  font-size: 25px;
+  font-weight: 500;
+  @include for-size($desktop-up) {
+    font-size: 35px;
+  }
+}
+
+.fs-h1 {
+  font-size: 45px;
+  letter-spacing: -0.01em;
+  line-height: 100%;
+  @include for-size($tablet-portrait-up) {
+    font-size: 80px;
+  }
+  @include for-size($desktop-up) {
+    font-size: 140px;
+  }
+}
+
+.fs-h2 {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 130%;
+  @include for-size($tablet-portrait-up) {
+    font-size: 35px;
+  }
+  @include for-size($desktop-up) {
+    font-size: 55px;
+  }
+}
+
+.fs-h3 {
+  font-size: 25px;
+  letter-spacing: 0.012em;
+  line-height: 130%;
+  @include for-size($tablet-portrait-up) {
+    font-size: 24px;
+  }
+  @include for-size($desktop-up) {
+    font-size: 35px;
+  }
+}
+
+.fs-h4 {
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 130%;
+  @include for-size($tablet-portrait-up) {
+    font-size: 60px;
+  }
+  @include for-size($desktop-up) {
+    font-size: 80px;
+  }
+}
+
+.fs-h5 {
+  font-size: 28px;
+  line-height: 130%;
+  @include for-size($tablet-portrait-up) {
+    font-size: 40px;
+  }
+  @include for-size($desktop-up) {
+    font-size: 55px;
+  }
+}
+
+.fs-h6 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 130%;
+  @include for-size($tablet-portrait-up) {
+    font-size: 22px;
+  }
+  @include for-size($desktop-up) {
+    font-size: 25px;
+  }
+}
+
+.post-card__cat {
+  color: $clr-navy;
+  &:hover,
+  &:focus-visible {
+    color: $clr-mallard-green;
+  }
+}

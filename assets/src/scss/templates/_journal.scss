@@ -1,0 +1,8 @@
+.journal {
+  &__main {
+    background-color: $clr-off-white;
+    @include for-size($phone-only) {
+      padding-top: 55px !important;
+    }
+  }
+}

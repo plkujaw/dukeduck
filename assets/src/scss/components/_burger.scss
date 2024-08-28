@@ -1,0 +1,39 @@
+.burger {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+
+  &__line {
+    background-color: $clr-navy;
+    display: block;
+    height: 3px;
+    transition: $transition-default;
+    width: 48px;
+    &--2 {
+      margin: 14px 0;
+    }
+  }
+
+  &--open {
+    .burger__line {
+      &--1 {
+        transform: translateY(17px) rotate(45deg);
+      }
+
+      &--2 {
+        opacity: 0;
+      }
+
+      &--3 {
+        transform: translateY(-17px) rotate(-45deg);
+      }
+    }
+    &:hover,
+    &:focus-visible {
+      .burger__line {
+        background-color: $clr-mallard-green;
+      }
+    }
+  }
+}

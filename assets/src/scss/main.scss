@@ -1,0 +1,64 @@
+// core elements
+
+@import 'core/normalize';
+@import 'core/breakpoints';
+@import 'core/colours';
+@import 'core/helpers';
+@import 'core/media';
+@import 'core/fonts';
+@import 'core/base';
+@import 'core/typography';
+@import 'core/graphic-elements';
+
+//layouts
+
+@import 'layout/404';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/mobile-menu';
+
+// templates
+@import 'templates/archive';
+@import 'templates/journal';
+@import 'templates/page-contact';
+@import 'templates/page-privacy_policy';
+@import 'templates/single-post';
+
+// components
+
+@import 'components/button';
+@import 'components/burger';
+@import 'components/content-slider';
+@import 'components/cookies';
+@import 'components/journal-top';
+@import 'components/next-project';
+@import 'components/proposal-password-form';
+@import 'components/related-content';
+@import 'components/visual-popup';
+
+// blocks
+
+@import 'blocks/block-audio';
+@import 'blocks/block-budget-options';
+@import 'blocks/block-case-study';
+@import 'blocks/block-content-grid';
+@import 'blocks/block-credits';
+@import 'blocks/block-hero';
+@import 'blocks/block-hero-alt';
+@import 'blocks/block-hero-case-study';
+@import 'blocks/block-instagram-feed';
+@import 'blocks/block-intro';
+@import 'blocks/block-intro-alt';
+@import 'blocks/block-journal-post';
+@import 'blocks/block-link';
+@import 'blocks/block-link-alt';
+@import 'blocks/block-link-extended';
+@import 'blocks/block-masonry';
+@import 'blocks/block-media';
+@import 'blocks/block-newsletter';
+@import 'blocks/block-page-title';
+@import 'blocks/block-team-members';
+@import 'blocks/block-testimonials';
+@import 'blocks/block-text';
+@import 'blocks/block-post-text';
+@import 'blocks/block-video-series';

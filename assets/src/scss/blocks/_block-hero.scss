@@ -1,0 +1,174 @@
+.hero {
+  padding-bottom: 84px;
+  @include for-size($tablet-landscape-up) {
+    padding-bottom: 100px;
+  }
+
+  h1 {
+    margin-bottom: -25px;
+    @include for-size($phone-only) {
+      margin-bottom: -15px;
+    }
+  }
+
+  h2 {
+    padding-left: 14%;
+    position: relative;
+    transition: $transition-default;
+    &::before {
+      background-color: currentColor;
+      content: '';
+      display: inline-block;
+      height: 2px;
+      left: 0;
+      position: absolute;
+      top: 0.6em;
+      width: 12%;
+    }
+    &.animate {
+      animation-duration: 0.7s;
+      animation-iteration-count: 1;
+      animation-name: animate;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      @keyframes animate {
+        from {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  p {
+    margin-top: 7px;
+    position: relative;
+    @include for-size($tablet-landscape-up) {
+      margin-top: 12px;
+    }
+    @include for-size($desktop-up) {
+      margin-top: 10px;
+    }
+  }
+
+  a {
+    svg {
+      display: inline-block;
+      height: 22px !important;
+      margin-left: 20px;
+      transition: $transition-default;
+      vertical-align: middle;
+    }
+    &:hover {
+      svg {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+  }
+
+  &__media {
+    margin: 30px 0 18px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    @include for-size($tablet-portrait-up) {
+      margin: 52px 0 16px;
+    }
+
+    @include for-size($tablet-landscape-up) {
+      margin: 35px 0;
+    }
+    .hero__video {
+      a {
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__graphic {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vw;
+    max-height: 70px;
+    max-width: 70px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 100vw;
+    z-index: 69;
+    @include for-size($tablet-portrait-up) {
+      max-height: 120px;
+      max-width: 120px;
+    }
+    @include for-size($tablet-landscape-up) {
+      max-height: 200px;
+      max-width: 200px;
+      top: 75%;
+    }
+
+    @include for-size($desktop-up) {
+      max-height: 300px;
+      max-width: 300px;
+      top: -75%;
+    }
+  }
+
+  &__pagination {
+    align-items: center;
+    background: $clr-white;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 255, 255, 1) 15%
+    );
+    justify-content: flex-end;
+    right: 0;
+    z-index: 1;
+    @include for-size($phone-only) {
+      margin-top: 18px;
+    }
+
+    @include for-size($tablet-portrait-up) {
+      bottom: 7px;
+      // bottom: 40px;
+      padding: 15px 0 15px 20px;
+      position: absolute;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    @include for-size($desktop-up) {
+      // bottom: 45px;
+      bottom: 18px;
+    }
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .swiper {
+    padding-top: 20px;
+    @include for-size($tablet-portrait-up) {
+      padding-top: 30px;
+    }
+    @include for-size($desktop-up) {
+      padding-top: 60px;
+    }
+  }
+}

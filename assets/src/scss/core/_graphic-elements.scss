@@ -1,0 +1,46 @@
+.graphic-underline {
+  position: relative;
+  z-index: 1;
+  svg {
+    bottom: -7px;
+    height: 14px;
+    left: 0;
+    max-width: 110%;
+    position: absolute;
+    z-index: -1;
+    path {
+      stroke-dasharray: 2570;
+      stroke-dashoffset: 2570;
+      transition: $transition-slow;
+    }
+  }
+}
+
+.graphic-circle {
+  position: absolute;
+  svg {
+    path {
+      stroke-dasharray: 1255;
+      stroke-dashoffset: 1255;
+      transition: $transition-slow;
+    }
+  }
+}
+
+.graphic-animated {
+  svg {
+    path {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+.post-graphic-element-1 {
+  grid-column: 1/-1;
+  margin-left: auto;
+  max-height: 130px;
+  width: 50%;
+  @include for-size($phone-only) {
+    display: none;
+  }
+}

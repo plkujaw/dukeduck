@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  &:focus-visible {
+    outline: $clr-mallard-green solid 1px;
+    outline-offset: 2px;
+  }
+}
+
+body {
+  background-color: $clr-white;
+  color: $clr-navy;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+  &.no-scroll {
+    overflow: hidden;
+  }
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+#site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+main {
+  flex: 1 1 100%;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration-color: transparent;
+  transition: $transition-default;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  width: fit-content;
+  svg,
+  img {
+    pointer-events: none;
+  }
+}
+
+ul,
+ol {
+  padding-left: 1em;
+  li {
+    padding: 0.2em 0;
+  }
+}
+
+$site-width: 1440px; // based on the design
+$header-height: 120px; // based on the design
+
+.container {
+  margin: 0 auto;
+  max-width: $site-width;
+  padding: 0 25px;
+  width: 100%;
+  @include for-size($tablet-portrait-up) {
+    padding: 0 40px;
+  }
+  @include for-size($desktop-up) {
+    padding: 0 50px;
+  }
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+figcaption,
+.wp-caption-text {
+  color: $clr-dark-grey;
+  font-size: 14px;
+  padding-top: 7px;
+  text-align: center;
+}

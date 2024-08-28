@@ -1,0 +1,49 @@
+.block-intro-alt {
+  &__text {
+    display: flex;
+    flex-direction: column;
+    &-col-1 {
+      margin-bottom: 40px;
+    }
+
+    &-col-2 {
+      h3 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: $clr-dark-grey;
+      }
+    }
+
+    @include for-size($tablet-portrait-up) {
+      &-col-2 {
+        margin: 0 auto;
+        max-width: 500px;
+        h3 {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    @include for-size($desktop-up) {
+      flex-direction: row;
+      &-col-1 {
+        width: 35%;
+        h2 {
+          max-width: 280px;
+        }
+      }
+
+      &-col-2 {
+        max-width: 100%;
+        padding-right: 90px;
+        width: 65%;
+        h3 {
+          line-height: 100%;
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }
+}

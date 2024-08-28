@@ -1,0 +1,65 @@
+button, .btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.video-ctrl {
+  left: 50%;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: $transition-default;
+  z-index: 3;
+
+  svg {
+    height: auto;
+    width: 49px;
+    path,
+    rect {
+      transition: $transition-default;
+    }
+    @include for-size($tablet-landscape-up) {
+      width: 69px;
+    }
+  }
+
+  .video-play {
+    opacity: 1;
+    transform-origin: 50% 50%;
+  }
+
+  .video-pause {
+    opacity: 0;
+    transform-origin: 50% 50%;
+  }
+
+  &:hover {
+    .video-play {
+      scale: 1.1;
+    }
+  }
+
+  &--hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &--playing {
+    .video-play {
+      opacity: 0;
+    }
+
+    .video-pause {
+      opacity: 1;
+    }
+
+    &:hover {
+      .video-pause {
+        scale: 1.1;
+      }
+    }
+  }
+}

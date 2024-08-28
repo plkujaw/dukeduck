@@ -1,0 +1,32 @@
+.cmplz-cookiebanner {
+  margin: 0 !important;
+  width: 100% !important;
+  .cmplz-body {
+    align-items: center !important;
+  }
+  .cmplz-message {
+    @extend .fs-p2;
+    margin: 0 !important;
+  }
+  .cmplz-btn {
+    @extend .fs-b1;
+    justify-content: center !important;
+    min-width: fit-content !important;
+    text-transform: uppercase;
+    transition: $transition-default;
+    &:hover {
+      border-color: $clr-mallard-green !important;
+      color: $clr-mallard-green !important;
+    }
+    &:focus {
+      color: $clr-mallard-green !important;
+    }
+  }
+  .cmplz-category {
+    background-color: #071134 !important;
+    border: 1px solid #fff;
+    svg {
+      fill: #fff;
+    }
+  }
+}

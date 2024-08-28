@@ -1,0 +1,29 @@
+.block-content-grid {
+  &__heading {
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__entry {
+    padding: 0 15px;
+    width: 33.33%;
+  }
+
+  @include for-size($tablet-portrait-up) {
+    &__entry {
+      padding: 0 3%;
+      width: 25%;
+    }
+  }
+
+  @include for-size($desktop-up) {
+    &__entry {
+      width: 20%;
+    }
+  }
+}

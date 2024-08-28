@@ -1,0 +1,91 @@
+.block-link-alt {
+  &__inner {
+    border-bottom: 1px solid $clr-light-grey;
+    border-top: 1px solid $clr-light-grey;
+    display: flex;
+    padding: 20px 0;
+  }
+
+  &__text {
+    width: 70%;
+    h2 {
+      padding-bottom: 15px;
+    }
+    p {
+      color: $clr-dark-grey;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 20px;
+    width: 30%;
+  }
+
+  &__graphic-element {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    justify-self: flex-end;
+    margin-left: auto;
+    svg {
+      path {
+        fill: $clr-navy;
+      }
+    }
+  }
+
+  @include for-size($phone-only) {
+    &__inner {
+      display: block;
+    }
+
+    &__text,
+    &__meta {
+      width: 100%;
+    }
+
+    &__text {
+      margin-bottom: 50px;
+      h2 {
+        padding-bottom: 25px;
+      }
+    }
+
+    &__graphic-element {
+      display: none;
+    }
+  }
+
+  @include for-size($tablet-portrait-up) {
+    &__graphic-element {
+      padding-right: 30px;
+    }
+  }
+
+  @include for-size($desktop-up) {
+    &__inner {
+      padding: 50px 0;
+    }
+
+    &__text {
+      width: 60%;
+    }
+
+    &__meta {
+      padding-left: 50px;
+      width: 40%;
+    }
+
+    &__link {
+      padding-top: 80px;
+    }
+
+    &__graphic-element {
+      padding-right: 0;
+    }
+  }
+}

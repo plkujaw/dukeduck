@@ -1,0 +1,53 @@
+.block-intro {
+  &__title {
+    position: relative;
+
+    &::after {
+      background-color: $clr-navy;
+      content: '';
+      display: block;
+      height: 2px;
+      margin: 50px 0;
+      width: 100px;
+      @include for-size($phone-only) {
+        margin: 5px 0 28px 0;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    @include for-size($phone-only) {
+      display: block;
+    }
+
+    h3 {
+      color: $clr-mallard-green;
+      padding-right: 20%;
+      @include for-size($phone-only) {
+        padding-right: 0;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      letter-spacing: 0.012em;
+      line-height: 160%;
+
+      padding-top: 0.75em;
+      @include for-size($tablet-portrait-up) {
+        font-size: 20px;
+      }
+      @include for-size($desktop-up) {
+        font-size: 25px;
+      }
+      a {
+        color: $clr-mallard-green;
+        &:hover {
+          text-decoration-color: currentColor;
+        }
+      }
+    }
+  }
+}

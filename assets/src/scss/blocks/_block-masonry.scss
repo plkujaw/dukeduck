@@ -1,0 +1,47 @@
+.block-masonry {
+  &__inner {
+    &__inner {
+      display: block;
+    }
+
+    .masonry-item {
+      display: block;
+      margin-bottom: 20px;
+      max-height: none;
+    }
+  }
+
+  @include for-size($tablet-portrait-up) {
+    &__inner {
+      display: grid;
+      grid-gap: 10px;
+    }
+
+    .masonry-item {
+      height: 200px;
+      margin-bottom: 0;
+      img {
+        height: 100%;
+      }
+
+      &.span-vertical {
+        grid-row: span 2;
+        height: auto;
+      }
+
+      &.span-horizontal {
+        @for $i from 2 through 5 {
+          &--#{$i} {
+            grid-column: span $i;
+          }
+        }
+      }
+    }
+  }
+
+  @include for-size($tablet-landscape-up) {
+    .masonry-item {
+      height: 300px;
+    }
+  }
+}

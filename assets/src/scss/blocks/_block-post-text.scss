@@ -1,0 +1,106 @@
+.post-text {
+  font-size: 1em;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 100%;
+    margin: 0 0 1em 0;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.6em;
+  }
+
+  h4 {
+    font-size: 1.4em;
+  }
+
+  h5 {
+    font-size: 1.2em;
+  }
+
+  h6 {
+    font-size: 0.8em;
+  }
+
+  a {
+    color: $clr-mallard-green;
+    display: inline;
+    &:hover,
+    &:focus {
+      color: $clr-navy;
+      text-decoration-color: $clr-navy;
+    }
+  }
+
+  .alignleft,
+  .aligncenter,
+  .alignright,
+  .alignnone {
+    width: 100% !important;
+  }
+
+  .wp-caption {
+    margin: 1em 0;
+    img {
+      margin: 0;
+    }
+  }
+
+  img {
+    clear: both;
+    margin: 1em 0;
+    width: 100%;
+  }
+
+  @include for-size($desktop-up) {
+    img {
+      margin: 0;
+    }
+
+    .fs-p3 {
+      margin: 0 auto;
+      max-width: 500px;
+    }
+
+    .wp-caption {
+      margin-top: 0 !important;
+    }
+
+    .alignright {
+      float: right;
+      margin: 0 0 1em 1em;
+      width: 50% !important;
+    }
+
+    .alignleft {
+      float: left;
+      margin: 0 1em 1em 0;
+      width: 50% !important;
+    }
+
+    .aligncenter {
+      margin: 1em auto;
+      width: fit-content !important;
+    }
+
+    .alignnone {
+      margin: 1em 0;
+      img {
+        width: auto;
+      }
+    }
+  }
+}
